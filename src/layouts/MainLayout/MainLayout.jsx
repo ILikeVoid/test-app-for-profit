@@ -2,20 +2,18 @@ import s from './MainLayout.module.scss'
 import { Outlet, useLocation } from 'react-router-dom'
 import Header from '../../components/Header/Header.jsx'
 import { useEffect } from 'react'
-import { useAppealsStore } from '../../store/appeals-store.js'
-import { ROUTES } from '../../constants/routes.js'
+import { useAppealsStore } from '../../store/appealsStore.js'
+import { APP_ROUTES } from '../../constants/appRoutes.js'
 
 export function MainLayout() {
 	const fetchAppeals = useAppealsStore(state => state.fetchAppeals)
 	const location = useLocation()
 
 	useEffect(() => {
-		fetchAppeals()
+		fetchAppeals().then(() => console.log(''))
 	}, [fetchAppeals])
 
-	const currentRoute = ROUTES.find(
-		route => route.slug === location.pathname
-	)
+	const currentRoute = APP_ROUTES.find(route => route.href === location.pathname)
 
 	return (
 		<div className={s.layout}>

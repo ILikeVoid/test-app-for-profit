@@ -1,12 +1,12 @@
-export const ROUTES = [
+export const APP_ROUTES = [
 	{
 		id: 1,
 		title: 'Таблица',
-		slug: '/'
+		href: '/'
 	},
 	{
 		id: 2,
 		title: 'Карта',
-		slug: '/map'
+		href: '/map'
 	}
 ]

@@ -1,5 +1,5 @@
 import { Tag } from 'antd'
-import { STATUS_COLORS } from './statuses.js'
+import { APPEAL_STATUS_COLORS } from './appealsStatuses.js'
 
 export const APPEALS_TABLE_COLUMNS = [
 	{
@@ -22,7 +22,7 @@ export const APPEALS_TABLE_COLUMNS = [
 		dataIndex: 'status',
 		key: 'status',
 		render: (status) => (
-			<Tag color={STATUS_COLORS[status]}>
+			<Tag color={APPEAL_STATUS_COLORS[status]}>
 				{status}
 			</Tag>
 		)

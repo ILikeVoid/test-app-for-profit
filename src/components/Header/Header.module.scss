@@ -22,37 +22,21 @@
       column-gap: 26px;
 
       a {
-        position: relative;
+        display: inline-block;
+        padding-bottom: 4px;
         color: black;
         font-weight: 600;
         text-decoration: none;
-        transition: color 0.3s;
+        background-image: linear-gradient(#1f72ff, #1f72ff);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-size: 0 2px;
+        transition: 0.3s;
 
-        &::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: -2px;
-          width: 100%;
-          height: 2px;
-          background: transparent;
-          transition: background 0.3s;
-        }
-
-        &:hover {
-          color: #1f72ff;
-
-          &::after {
-            background: #1f72ff;
-          }
-        }
-
+        &:hover,
         &.active_link {
           color: #1f72ff;
-
-          &::after {
-            background: #1f72ff;
-          }
+          background-size: 100% 2px;
         }
       }
     }
