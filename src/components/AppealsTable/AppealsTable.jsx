@@ -10,7 +10,6 @@ export function AppealsTable({ appeals, isLoading, setSelectedAppeal, setOpen })
 					 loading={isLoading}
 					 tableLayout="fixed"
 					 pagination={{ pageSize: 10 }}
-					 className={s.table}
 					 rowClassName={s.row}
 					 onRow={(appeal) => ({
 						 onClick: () => {

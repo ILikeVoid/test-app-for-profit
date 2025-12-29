@@ -1,8 +1,8 @@
-import s from './AppealsTablePage.module.css'
 import { AppealsTable } from '../../components/AppealsTable/AppealsTable.jsx'
 import { useAppealsStore } from '../../store/appealsStore.js'
 import { Modal } from 'antd'
 import { useState } from 'react'
+import { AppealDetails } from '../../components/AppealDetails/AppealDetails.jsx'
 
 export function AppealsTablePage() {
 	const appeals = useAppealsStore(state => state.data)
@@ -29,14 +29,15 @@ export function AppealsTablePage() {
 				title={`Обращение №:${selectedAppeal?.id}`}
 				onCancel={handleClose}
 				footer={null}
+				afterOpenChange={(visible) => {
+					if (visible) {
+						setTimeout(() => {
+							window.dispatchEvent(new Event('resize'))
+						}, 0)
+					}
+				}}
 			>
-				<div className={s.category}>{selectedAppeal?.category}</div>
-				<div className={s.items}>
-					<div className={s.item}></div>
-					<div className={s.item}></div>
-					<div className={s.item}></div>
-					<div className={s.item}></div>
-				</div>
+				<AppealDetails appeal={selectedAppeal} />
 			</Modal>
 		</>
 	)

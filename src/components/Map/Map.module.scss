@@ -1,0 +1,43 @@
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .map {
+    width: 100%;
+    height: 100%;
+
+    .popup_items {
+      width: 100%;
+      padding: 0 4px;
+    }
+
+    .popup_head {
+      width: 200px;
+      display: flex;
+      align-items: self-start;
+      justify-content: space-between;
+      column-gap: 10px;
+
+      .popup_category {
+        font-weight: 550;
+        font-size: 16px;
+      }
+    }
+
+    .popup_address {
+      margin-top: 20px;
+    }
+  }
+}
+
+.shortWrapper {
+  height: 260px;
+}
+
+.fullMapWrapper {
+  height: 700px;
+}
+
+
+
