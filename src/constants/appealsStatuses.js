@@ -1,11 +1,13 @@
-const AppealsStatuses = {
+export const APPEAL_STATUSES = ['В работе', 'Решено', 'Отклонено']
+
+const AppealsStatusesKeys = {
 	IN_PROGRESS: 'В работе',
 	RESOLVED: 'Решено',
 	REJECTED: 'Отклонено'
 }
 
 export const APPEAL_STATUS_COLORS = {
-	[AppealsStatuses.IN_PROGRESS]: 'blue',
-	[AppealsStatuses.RESOLVED]: 'green',
-	[AppealsStatuses.REJECTED]: 'red'
+	[AppealsStatusesKeys.IN_PROGRESS]: 'blue',
+	[AppealsStatusesKeys.RESOLVED]: 'green',
+	[AppealsStatusesKeys.REJECTED]: 'red'
 }
