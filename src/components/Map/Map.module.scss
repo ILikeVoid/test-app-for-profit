@@ -18,26 +18,105 @@
       align-items: self-start;
       justify-content: space-between;
       column-gap: 10px;
+      flex-wrap: wrap;
 
       .popup_category {
         font-weight: 550;
         font-size: 16px;
+        word-break: break-word;
       }
     }
 
     .popup_address {
       margin-top: 20px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .map {
+      .popup_head {
+        width: 180px;
+
+        .popup_category {
+          font-size: 15px;
+        }
+      }
+
+      .popup_address {
+        margin-top: 15px;
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .map {
+      .popup_head {
+        width: 150px;
+
+        .popup_category {
+          font-size: 14px;
+        }
+      }
+
+      .popup_address {
+        margin-top: 12px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .map {
+      .popup_head {
+        width: 120px;
+        flex-direction: column;
+        gap: 8px;
+
+        .popup_category {
+          font-size: 13px;
+        }
+      }
+
+      .popup_address {
+        margin-top: 10px;
+        font-size: 11px;
+      }
     }
   }
 }
 
 .shortWrapper {
   height: 260px;
+
+  @media (max-width: 768px) {
+    height: 220px;
+  }
+
+  @media (max-width: 480px) {
+    height: 200px;
+  }
 }
 
 .fullMapWrapper {
   padding: 0 10%;
   height: 600px;
+
+  @media (max-width: 1024px) {
+    padding: 0 5%;
+    height: 500px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 2%;
+    height: 400px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0;
+    height: 350px;
+  }
 }
 
 

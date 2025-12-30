@@ -3,6 +3,7 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 16px;
+  margin-bottom: 20px;
 }
 
 .filter > :first-child {
@@ -17,10 +18,25 @@
 @media (max-width: 1024px) {
   .filter {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .filter > * {
     justify-self: stretch;
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter {
+    gap: 8px;
+    margin-bottom: 12px;
   }
 }

@@ -7,6 +7,7 @@
 
   .header_items {
     margin: 0 4%;
+    width: 100%;
     display: flex;
     align-items: center;
     column-gap: 40px;
@@ -15,11 +16,13 @@
       font-size: 32px;
       font-weight: 600;
       user-select: none;
+      white-space: nowrap;
     }
 
     nav {
       display: flex;
       column-gap: 26px;
+      flex-wrap: wrap;
 
       a {
         display: inline-block;
@@ -32,11 +35,75 @@
         background-position: left bottom;
         background-size: 0 2px;
         transition: 0.3s;
+        white-space: nowrap;
 
         &:hover,
         &.active_link {
           color: #1f72ff;
           background-size: 100% 2px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .header_items {
+      margin: 0 3%;
+      column-gap: 30px;
+
+      .logo {
+        font-size: 28px;
+      }
+
+      nav {
+        column-gap: 20px;
+
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 56px;
+
+    .header_items {
+      margin: 0 2%;
+      column-gap: 20px;
+
+      .logo {
+        font-size: 24px;
+      }
+
+      nav {
+        column-gap: 16px;
+
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    height: 50px;
+
+    .header_items {
+      margin: 0 4%;
+      column-gap: 12px;
+      flex-wrap: wrap;
+
+      .logo {
+        font-size: 20px;
+      }
+
+      nav {
+        column-gap: 12px;
+
+        a {
+          font-size: 13px;
+          padding-bottom: 2px;
         }
       }
     }

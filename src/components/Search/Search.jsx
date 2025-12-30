@@ -1,6 +1,6 @@
-import s from './AppealsSearch.module.scss'
+import s from './Search.module.scss'
 
-export default function AppealsSearch({ value, onChange }) {
+export default function Search({ value, onChange }) {
 	return (
 		<div className={s.search}>
 			<input
@@ -12,3 +12,4 @@ export default function AppealsSearch({ value, onChange }) {
 		</div>
 	)
 }
+

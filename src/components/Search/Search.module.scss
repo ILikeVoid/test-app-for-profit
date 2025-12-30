@@ -24,4 +24,12 @@
   @media (max-width: 1024px) {
     max-width: 100%;
   }
+
+  @media (max-width: 480px) {
+    input {
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+  }
 }
+

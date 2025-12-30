@@ -6,4 +6,16 @@
   height: 700px;
   flex-direction: column;
   row-gap: 4px;
+
+  @media (max-width: 1024px) {
+    height: 500px;
+  }
+
+  @media (max-width: 768px) {
+    height: 400px;
+  }
+
+  @media (max-width: 480px) {
+    height: 300px;
+  }
 }

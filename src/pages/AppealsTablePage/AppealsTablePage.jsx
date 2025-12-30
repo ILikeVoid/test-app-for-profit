@@ -5,7 +5,7 @@ import { Modal } from 'antd'
 import { useMemo, useState } from 'react'
 import { AppealDetails } from '../../components/AppealDetails/AppealDetails.jsx'
 import AppealsStatusFilter from '../../components/AppealsStatusFilter/AppealsStatusFilter.jsx'
-import AppealsSearch from '../../components/AppealsSearch/AppealsSearch.jsx'
+import Search from '../../components/Search/Search.jsx'
 
 export function AppealsTablePage() {
 	const appeals = useAppealsStore(state => state.data)
@@ -37,7 +37,7 @@ export function AppealsTablePage() {
 					selectedStatuses={selectedStatuses}
 					onChange={setSelectedStatuses}
 				/>
-				<AppealsSearch value={search} onChange={setSearch} />
+				<Search value={search} onChange={setSearch} />
 			</div>
 			<AppealsTable
 				appeals={filteredAppeals}

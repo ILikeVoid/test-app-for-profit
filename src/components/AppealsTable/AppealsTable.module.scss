@@ -1,3 +1,77 @@
 .row {
   cursor: pointer;
 }
+
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+// Адаптивные стили для таблицы Ant Design
+@media (max-width: 1024px) {
+  .tableWrapper :global(.ant-table-wrapper .ant-table) {
+    font-size: 13px;
+  }
+
+  .tableWrapper :global(.ant-table-wrapper .ant-table-thead > tr > th) {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+
+  .tableWrapper :global(.ant-table-wrapper .ant-table-tbody > tr > td) {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tableWrapper :global(.ant-table-wrapper .ant-table) {
+    font-size: 12px;
+  }
+
+  .tableWrapper :global(.ant-table-wrapper .ant-table-thead > tr > th) {
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+
+  .tableWrapper :global(.ant-table-wrapper .ant-table-tbody > tr > td) {
+    padding: 10px 6px;
+    font-size: 12px;
+    word-break: break-word;
+  }
+
+  .tableWrapper :global(.ant-table-wrapper .ant-pagination .ant-pagination-options) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .tableWrapper :global(.ant-table-wrapper .ant-table) {
+    font-size: 11px;
+  }
+
+  .tableWrapper :global(.ant-table-wrapper .ant-table-thead > tr > th) {
+    padding: 8px 4px;
+    font-size: 11px;
+  }
+
+  .tableWrapper :global(.ant-table-wrapper .ant-table-tbody > tr > td) {
+    padding: 8px 4px;
+    font-size: 11px;
+  }
+
+  .tableWrapper :global(.ant-table-wrapper .ant-pagination .ant-pagination-item) {
+    min-width: 24px;
+    height: 24px;
+    line-height: 22px;
+    margin: 0 2px;
+    font-size: 12px;
+  }
+
+  .tableWrapper :global(.ant-table-wrapper .ant-pagination .ant-pagination-prev),
+  .tableWrapper :global(.ant-table-wrapper .ant-pagination .ant-pagination-next) {
+    min-width: 24px;
+    height: 24px;
+    line-height: 24px;
+  }
+}
